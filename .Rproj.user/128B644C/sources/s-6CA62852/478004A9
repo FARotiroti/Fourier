@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1652726058542.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "478004A9",
+    "lastKnownWriteTime" : 1652726198,
+    "last_content_update" : 1652726198,
+    "path" : "~/fourier/src/RcppExports.cpp",
+    "project_path" : "src/RcppExports.cpp",
+    "properties" : {
+        "cursorPosition" : "13,11",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}

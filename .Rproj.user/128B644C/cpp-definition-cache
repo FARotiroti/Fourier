@@ -1,0 +1,35 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 8,
+                "file" : "C:/Users/rotir/Documents/fourier/src/fourier.cpp",
+                "kind" : 6,
+                "line" : 7,
+                "name" : "fr_R_cpp(int, int, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@fr_R_cpp#I#I#d#"
+            },
+            {
+                "column" : 6,
+                "file" : "C:/Users/rotir/Documents/fourier/src/fourier.cpp",
+                "kind" : 6,
+                "line" : 27,
+                "name" : "fr_R_cpp_vec(int, int, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@fr_R_cpp_vec#I#I#d#"
+            },
+            {
+                "column" : 11,
+                "file" : "C:/Users/rotir/Documents/fourier/src/fourier.cpp",
+                "kind" : 6,
+                "line" : 54,
+                "name" : "fr_Rm_cpp(int, int, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@fr_Rm_cpp#I#I#I#"
+            }
+        ],
+        "file" : "C:/Users/rotir/Documents/fourier/src/fourier.cpp",
+        "file_last_write" : 1635051861.000000
+    }
+]
