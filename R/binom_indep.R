@@ -36,7 +36,7 @@ xx<-(apply(xx,1,yeo.johnson,lambda=lambda))
 
 # #if indep
 for(j in 1:ii) {
-  checkR_temp<-fr_R_cpp(y_yj[j],as.matrix(t(xx)[,j]),seq(50,50,length.out=1))
+  checkR_temp<-fr_R_cpp(y_yj[j],as.matrix(t(xx)[,j]),seq(25,25,length.out=1))
   checkR[j]<-checkR[j]+checkR_temp
   
 }
@@ -56,7 +56,7 @@ for(i in 1:2000){
     xx<-(apply(xx,1,yeo.johnson,lambda=lambda))
     # #if indep
     for(j in 1:ii) {
-      checkR_temp<-fr_R_cpp(y_yj[j],as.matrix(t(xx)[,j]),seq(50,50,length.out=1))
+      checkR_temp<-fr_R_cpp(y_yj[j],as.matrix(t(xx)[,j]),seq(25,25,length.out=1))
       checkR[j]<-checkR[j]+checkR_temp
     }
 
@@ -75,7 +75,7 @@ for(i in 1:2000){
     xx<-(apply(xx,1,yeo.johnson,lambda=lambda))
     # #if indep
     for(j in 1:ii) {
-      checkR_temp<-fr_R_cpp(y_yj[j],as.matrix(t(xx)[,j]),seq(50,50,length.out=1))
+      checkR_temp<-fr_R_cpp(y_yj[j],as.matrix(t(xx)[,j]),seq(25,25,length.out=1))
       checkR[j]<-checkR[j]+checkR_temp
     }
     }
