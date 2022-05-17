@@ -48,7 +48,7 @@ checkRR<-numeric(nn)
 
 xx<-do.call(cbind,lapply(1:1e4,function(x) as.numeric(arima.sim(model = list(order = c(1, 0, 0), ar = theta), n = nn))))
 xx<-apply(xx,2,function(x) yeo.johnson(x,lambda = lambda))
-checkR<-checkR+median(fr_Rm_cpp(y_yj,t(xx),seq(20,30,length.out=25)))/nnn
+checkR<-checkR+median(fr_Rm_cpp(y_yj,t(xx),seq(25,25,length.out=1)))/nnn
 print("1")
 }
 }
@@ -64,7 +64,7 @@ for(i in 1:iii){
 for(ii in 1:nnn){
     xx<-do.call(cbind,lapply(1:1e4,function(x) as.numeric(arima.sim(model = list(order = c(1, 0, 0), ar = theta), n = nn))))
     xx<-apply(xx,2,function(x) yeo.johnson(x,lambda = lambda))
-    checkR<-checkR+median(fr_Rm_cpp(y_yj,t(xx),seq(20,30,length.out=25)))/nnn
+    checkR<-checkR+median(fr_Rm_cpp(y_yj,t(xx),seq(25,25,length.out=1)))/nnn
 }
   
 
@@ -80,7 +80,7 @@ for(ii in 1:nnn){
     for(ii in 1:nnn){
     xx<-do.call(cbind,lapply(1:1e4,function(x) as.numeric(arima.sim(model = list(order = c(1, 0, 0), ar = theta1), n = nn))))
     xx<-apply(xx,2,function(x) yeo.johnson(x,lambda = lambda))
-      checkR<-checkR+median(fr_Rm_cpp(y_yj,t(xx),seq(20,30,length.out=25)))/nnn 
+      checkR<-checkR+median(fr_Rm_cpp(y_yj,t(xx),seq(25,25,length.out=1)))/nnn 
 
     }
       if(checkR>0) {
