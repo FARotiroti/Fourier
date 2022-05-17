@@ -44,10 +44,10 @@ while(checkR==-Inf||is.na(median(checkR))){
 xx<-do.call(cbind,lapply(1:1e4,function(x) as.numeric(arima.sim(model = list(order = c(1, 0, 0), ar = theta), n = nn))))
 xx<-apply(xx,2,function(x) yeo.johnson(x,lambda = lambda))
 
-checkRR[1]<-checkRR[1]+(median(fr_Rm_cpp(y_yj[1],as.matrix(t(xx)[,1]),seq(5,5,length.out=1))))
+checkRR[1]<-checkRR[1]+(median(fr_Rm_cpp(y_yj[1],as.matrix(t(xx)[,1]),seq(25,25,length.out=1))))
 for(j in 2:(nn)){
-  checkR_temp_n<-(median(fr_Rm_cpp(y_yj[c(j,j-1)],as.matrix(t(xx)[,c(j,j-1)]),seq(5,5,length.out=1))))
-  checkR_temp_d<-(median(fr_Rm_cpp(y_yj[j-1],as.matrix(t(xx)[,j-1]),seq(5,5,length.out=1))))
+  checkR_temp_n<-(median(fr_Rm_cpp(y_yj[c(j,j-1)],as.matrix(t(xx)[,c(j,j-1)]),seq(25,25,length.out=1))))
+  checkR_temp_d<-(median(fr_Rm_cpp(y_yj[j-1],as.matrix(t(xx)[,j-1]),seq(25,25,length.out=1))))
   checkRR[j]=checkRR[j]+checkR_temp_n/checkR_temp_d
 
 }
@@ -69,10 +69,10 @@ for(i in 1:iii){
 for(ii in 1:nnn){
     xx<-do.call(cbind,lapply(1:1e4,function(x) as.numeric(arima.sim(model = list(order = c(1, 0, 0), ar = theta), n = nn))))
     xx<-apply(xx,2,function(x) yeo.johnson(x,lambda = lambda))
-       checkRR[1]<-checkRR[1]+(median(fr_Rm_cpp(y_yj[1],as.matrix(t(xx)[,1]),seq(5,5,length.out=1))))
+       checkRR[1]<-checkRR[1]+(median(fr_Rm_cpp(y_yj[1],as.matrix(t(xx)[,1]),seq(25,25,length.out=1))))
        for(j in 2:(nn)){
-         checkR_temp_n<-(median(fr_Rm_cpp(y_yj[c(j,j-1)],as.matrix(t(xx)[,c(j,j-1)]),seq(5,5,length.out=1))))
-         checkR_temp_d<-(median(fr_Rm_cpp(y_yj[j-1],as.matrix(t(xx)[,j-1]),seq(5,5,length.out=1))))
+         checkR_temp_n<-(median(fr_Rm_cpp(y_yj[c(j,j-1)],as.matrix(t(xx)[,c(j,j-1)]),seq(25,25,length.out=1))))
+         checkR_temp_d<-(median(fr_Rm_cpp(y_yj[j-1],as.matrix(t(xx)[,j-1]),seq(25,25,length.out=1))))
          checkRR[j]=checkRR[j]+checkR_temp_n/checkR_temp_d
        }
 
@@ -91,10 +91,10 @@ for(ii in 1:nnn){
     xx<-do.call(cbind,lapply(1:1e4,function(x) as.numeric(arima.sim(model = list(order = c(1, 0, 0), ar = theta1), n = nn))))
     xx<-apply(xx,2,function(x) yeo.johnson(x,lambda = lambda))
 
-      checkRR[1]<-checkRR[1]+(median(fr_Rm_cpp(y_yj[1],as.matrix(t(xx)[,1]),seq(5,5,length.out=1))))
+      checkRR[1]<-checkRR[1]+(median(fr_Rm_cpp(y_yj[1],as.matrix(t(xx)[,1]),seq(25,25,length.out=1))))
       for(j in 2:(nn)){
-        checkR_temp_n<-(median(fr_Rm_cpp(y_yj[c(j,j-1)],as.matrix(t(xx)[,c(j,j-1)]),seq(5,5,length.out=1))))
-        checkR_temp_d<-(median(fr_Rm_cpp(y_yj[j-1],as.matrix(t(xx)[,j-1]),seq(5,5,length.out=1))))
+        checkR_temp_n<-(median(fr_Rm_cpp(y_yj[c(j,j-1)],as.matrix(t(xx)[,c(j,j-1)]),seq(25,25,length.out=1))))
+        checkR_temp_d<-(median(fr_Rm_cpp(y_yj[j-1],as.matrix(t(xx)[,j-1]),seq(25,25,length.out=1))))
         checkRR[j]=checkRR[j]+checkR_temp_n/checkR_temp_d
       }
 
