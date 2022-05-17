@@ -33,7 +33,7 @@ while(checkR<0){
   for(iii in 1:nn){
 xx<-matrix(rbinom(ii*1e4,5,theta),ncol = ii)
 xx<-(apply(xx,1,yeo.johnson,lambda=lambda))
-checkR_temp<-median(fr_Rm_cpp(y_yj,t(xx),seq(100,100,length.out=1)))/nn
+checkR_temp<-median(fr_Rm_cpp(y_yj,t(xx),seq(25,25,length.out=1)))/nn
 checkR<-checkR+checkR_temp
 }
 if(is.na(checkR)) checkR<--1
@@ -52,7 +52,7 @@ for(i in 1:5000){
     xx<-matrix(rbinom(ii*1e4,5,theta),ncol = ii)
     xx<-xx+rnorm(length(c(xx)),0,.1)
     xx<-(apply(xx,1,yeo.johnson,lambda=lambda))
-    checkR_temp<-median(fr_Rm_cpp(y_yj,t(xx),seq(100,100,length.out=1)))/nn
+    checkR_temp<-median(fr_Rm_cpp(y_yj,t(xx),seq(25,25,length.out=1)))/nn
     checkR<-checkR+checkR_temp
 }
     if(!is.na(median(checkR))&&median(checkR)>0) {
@@ -67,7 +67,7 @@ for(i in 1:5000){
     xx<-matrix(rbinom(ii*1e4,5,theta1),ncol = ii)
     xx<-xx+rnorm(length(c(xx)),0,0.1)
     xx<-(apply(xx,1,yeo.johnson,lambda=lambda))
-    checkR_temp<-median(fr_Rm_cpp(y_yj,t(xx),seq(100,100,length.out=1)))/nn
+    checkR_temp<-median(fr_Rm_cpp(y_yj,t(xx),seq(25,25,length.out=1)))/nn
     checkR<-checkR+checkR_temp    
     }
     
