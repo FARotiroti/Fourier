@@ -161,8 +161,7 @@ for(ii in 1:nn){
 
           checkR_temp_n<-(median(fr_Rm_cpp(y_yj[c(j,j-1)],as.matrix(t(Y)[,c(j,j-1)]),seq(25,25,length.out=1))))
           checkR_temp_d<-(median(fr_Rm_cpp(y_yj[j-1],as.matrix(t(Y)[,j-1]),seq(25,25,length.out=1))))
-
-         if(checkR_temp_n<0) checkR_temp_n=0
+          
           checkRR[j]=checkRR[j]+checkR_temp_n/checkR_temp_d
 
         }
