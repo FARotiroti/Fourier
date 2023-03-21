@@ -957,7 +957,10 @@ for(jj in 1:m){
   
 }
 
-
+plot.ts((temp_n_mat[1,]),ylim=c(-10,20))
+for(i in 1:length(y_ind_n)){
+ lines((temp_n_mat[i,]))
+ }
 plot.ts(log(temp_n_mat[1,]),ylim=c(-20,3))
 for(i in 1:length(y_ind_n)){
   lines(log(temp_n_mat[i,]))
@@ -965,12 +968,16 @@ for(i in 1:length(y_ind_n)){
 which(is.nan(log(apply(temp_n_mat,1,function(x) median(x[3:6])))))
 abline(h=log(apply(temp_n_mat,1,function(x) median(x[3:6]))),col=2)
 
+plot.ts((temp_d_mat[1,]),ylim=c(-10,20))
+for(i in 1:length(y_ind_d)){
+ lines((temp_d_mat[i,]))
+ }
 plot.ts(log(temp_d_mat[1,]),ylim=c(-20,3),col=2)
-for(i in 1:length(y_ind_n)){
+for(i in 1:length(y_ind_d)){
   lines(log(temp_d_mat[i,]),col=2)
 }
-which(is.nan(log(apply(temp_d_mat,1,function(x) median(x[3:7])))))
-abline(h=log(apply(temp_d_mat,1,function(x) median(x[3:7]))),col=3)
+which(is.nan(log(apply(temp_d_mat,1,function(x) median(x[3:6])))))
+abline(h=log(apply(temp_d_mat,1,function(x) median(x[3:6]))),col=3)
 
 
 y_ind_n_r<-apply(temp_n_mat,1,function(x) max(3,min(5,which(x[1:5]<0))))
