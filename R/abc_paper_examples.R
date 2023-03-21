@@ -1029,9 +1029,9 @@ f_est<-function(arg1){
   r2=mean(arg1[,4])
   
   if(n>8) f_est1<-fr_Rm_cpp(y_yj1_y1,as.matrix(yy_yj1_y),
-                            seq(3,6,length.out=5))
+                            seq(3,6,length.out=10))
   if(n<=8) f_est1<-fr_Rm_cpp(y_yj1_y1,as.matrix(yy_yj1_y),
-                             seq(3,6,length.out=5))
+                             seq(3,6,length.out=10))
   
   return(median(f_est1))
   
